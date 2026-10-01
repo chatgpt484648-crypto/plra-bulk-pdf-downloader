@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body { width: 320px; max-width: 360px; margin: 0; padding: 10px; font: 13px sans-serif; color: #333; }
+    h2 { margin: -10px -10px 10px; padding: 10px; background: #1e6e4f; color: #fff; font-size: 15px; text-align: center; }
+    .row { display: flex; gap: 8px; margin-bottom: 8px; }
+    button { background: #1e6e4f; color: #fff; border: none; padding: 6px 10px; border-radius: 4px; cursor: pointer; flex: 1; font-size: 12px; }
+    button:hover { background: #16533b; }
+    .add-row { display: flex; gap: 6px; margin-bottom: 8px; }
+    .add-row input { flex: 1; padding: 4px; font-size: 12px; border: 1px solid #ccc; border-radius: 4px; }
+    .add-row button { flex: 0 0 auto; }
+    #list { max-height: 260px; overflow-y: auto; border: 1px solid #ddd; padding: 6px; border-radius: 4px; margin-bottom: 8px; background: #fafafa; }
+    #list div { margin-bottom: 4px; font-size: 12px; word-break: break-all; }
+    #list label { cursor: pointer; display: flex; align-items: center; gap: 6px; }
+    #status { font-size: 11px; color: #555; min-height: 16px; word-break: break-all; }
+  </style>
+</head>
+<body>
+  <h2>PLRA Bulk PDF Downloader</h2>
+  <div class="row">
+    <button id="scanBtn">Scan Page</button>
+    <button id="dlBtn">Download Selected</button>
+    <button id="tabsBtn">Open in Tabs</button>
+  </div>
+  <div class="add-row">
+    <input id="addUrl" type="text" placeholder="https://..." />
+    <button id="addBtn">Add</button>
+  </div>
+  <div id="list"></div>
+  <div id="status"></div>
+  <script src="popup.js"></script>
+</body>
+</html>

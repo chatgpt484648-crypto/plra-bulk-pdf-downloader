@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "PLRA Bulk PDF Downloader",
+  "version": "1.0",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "downloads",
+    "scripting",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://eregistration.punjab-zameen.gov.pk/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://eregistration.punjab-zameen.gov.pk/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
